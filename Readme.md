@@ -1,10 +1,6 @@
-Here's an **awesome README** template for your `yt_live` library. It includes all the essential sections to make your library stand out and be easy to use for developers.
-
----
-
 # `yt_live`
 
-Easily generate embeddable YouTube Live stream iframes with full control over attributes like `picture-in-picture`, `web-share`, and `fullscreen`. This lightweight library works seamlessly across modern JavaScript frameworks and is also available via a CDN.
+Easily generate embeddable YouTube Live stream iframes by passing just the **YouTube channel ID**. This lightweight library works seamlessly across modern JavaScript frameworks and browsers, making it simple to embed YouTube Live streams in your projects.
 
 ![yt_live](https://img.shields.io/npm/v/yt_live?color=blue&style=flat-square)  
 ![License](https://img.shields.io/npm/l/yt_live?color=green&style=flat-square)  
@@ -14,10 +10,10 @@ Easily generate embeddable YouTube Live stream iframes with full control over at
 
 ## Features ✨
 
-- **Flexible Iframe Attributes**: Customize `picture-in-picture`, `web-share`, and `fullscreen` options.
-- **Modern Support**: Works with CommonJS, ES Modules, and UMD for browser usage.
-- **Lightweight**: Minimal footprint with no external dependencies.
-- **Framework Agnostic**: Use with React, Angular, Vue, or plain JavaScript.
+- **Quick Integration**: Simply pass the YouTube channel ID.
+- **Modern Support**: Works with CommonJS, ES Modules, and UMD.
+- **Flexible Attributes**: Options for picture-in-picture, web-share, and fullscreen controls.
+- **Lightweight**: No external dependencies.
 
 ---
 
@@ -35,7 +31,7 @@ yarn add yt_live
 
 ### Via CDN
 
-Add the following script to your HTML:
+Add this script to your HTML to use the library directly in the browser:
 ```html
 <script src="https://cdn.jsdelivr.net/npm/yt_live/dist/yt_live.umd.js"></script>
 ```
@@ -50,6 +46,7 @@ Add the following script to your HTML:
 ```javascript
 const { generateIframe } = require('yt_live');
 
+// Replace 'UC_x5XG1OV2P6uZZ5FSM9Ttw' with your YouTube channel ID
 const iframeHTML = generateIframe('UC_x5XG1OV2P6uZZ5FSM9Ttw', 800, 450);
 console.log(iframeHTML);
 ```
@@ -58,6 +55,7 @@ console.log(iframeHTML);
 ```javascript
 import { generateIframe } from 'yt_live';
 
+// Replace 'UC_x5XG1OV2P6uZZ5FSM9Ttw' with your YouTube channel ID
 const iframeHTML = generateIframe('UC_x5XG1OV2P6uZZ5FSM9Ttw', 800, 450);
 console.log(iframeHTML);
 ```
@@ -66,6 +64,7 @@ console.log(iframeHTML);
 ```html
 <script src="https://cdn.jsdelivr.net/npm/yt_live/dist/yt_live.umd.js"></script>
 <script>
+    // Replace 'UC_x5XG1OV2P6uZZ5FSM9Ttw' with your YouTube channel ID
     const iframeHTML = Ytlive.generateIframe('UC_x5XG1OV2P6uZZ5FSM9Ttw', 800, 450);
     console.log(iframeHTML);
 </script>
@@ -73,28 +72,43 @@ console.log(iframeHTML);
 
 ---
 
+### How to Find Your YouTube Channel ID 🔍
+
+Follow these steps to locate your YouTube Channel ID:
+
+1. **Sign in** to your YouTube account.  
+2. Click on your **profile picture** in the top-right corner and select **Settings** from the dropdown menu.  
+3. In the left-hand menu, choose **Advanced Settings**.  
+4. Your **Channel ID** will be displayed under the "Channel settings" section.
+
+For more details, visit **[YouTube Advanced Settings](https://www.youtube.com/account_advanced)**.  
+
+Use this Channel ID in the `generateIframe` function to embed your YouTube Live stream! 🎥
+
+---
+
 ## API Reference 📖
 
 ### `generateIframe(id, width, height, options)`
 
-Generates the HTML string for an iframe that embeds a YouTube Live stream.
+Generates the HTML string for an iframe to embed a YouTube Live stream.
 
 #### Parameters:
 
-| Parameter  | Type   | Required | Description                                                                                 |
-|------------|--------|----------|---------------------------------------------------------------------------------------------|
-| `id`       | string | Yes      | The YouTube channel ID of the live stream.                                                 |
-| `width`    | number | Yes      | The width of the iframe.                                                                   |
-| `height`   | number | Yes      | The height of the iframe.                                                                  |
+| Parameter  | Type   | Required | Description                                                                             |
+|------------|--------|----------|-----------------------------------------------------------------------------------------|
+| `id`       | string | Yes      | The YouTube channel ID of the live stream.                                              |
+| `width`    | number | Yes      | The width of the iframe.                                                               |
+| `height`   | number | Yes      | The height of the iframe.                                                              |
 | `options`  | object | No       | Optional attributes for `picture-in-picture`, `web-share`, and `fullscreen` (default: `true`). |
 
 #### Options:
 
-| Option             | Type    | Default | Description                                                                 |
-|--------------------|---------|---------|-----------------------------------------------------------------------------|
-| `pictureInPicture` | boolean | `true`  | Enables or disables picture-in-picture mode.                               |
-| `webShare`         | boolean | `true`  | Enables or disables web-sharing capabilities.                              |
-| `allowFullscreen`  | boolean | `true`  | Controls whether the iframe allows fullscreen mode.                        |
+| Option             | Type    | Default | Description                                                    |
+|--------------------|---------|---------|----------------------------------------------------------------|
+| `pictureInPicture` | boolean | `true`  | Enables or disables picture-in-picture mode.                  |
+| `webShare`         | boolean | `true`  | Enables or disables web-sharing capabilities.                 |
+| `allowFullscreen`  | boolean | `true`  | Controls whether the iframe allows fullscreen mode.           |
 
 #### Example:
 
@@ -155,12 +169,6 @@ export default App;
 ## License 📝
 
 This project is licensed under the [MIT License](LICENSE).
-
----
-
-## Contributing 🤝
-
-Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request.
 
 ---
 
