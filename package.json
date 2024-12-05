@@ -1,11 +1,18 @@
 {
   "name": "yt_live",
   "version": "1.3.2",
-  "description": "Simple Package that helps youtube channels to embed their live video automatically",
+  "description": "Simple package that helps YouTube channels embed their live videos automatically",
   "main": "dist/yt_live.cjs.js",
   "module": "dist/yt_live.esm.js",
   "browser": "dist/yt_live.umd.js",
   "type": "module",
+  "exports": {
+    ".": {
+      "require": "./dist/yt_live.cjs.js",
+      "import": "./dist/yt_live.esm.js"
+    },
+    "./umd": "./dist/yt_live.umd.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/dev-itzarun/yt_live.git"
@@ -13,9 +20,7 @@
   "keywords": [
     "youtube",
     "live",
-    "embed",
-    "youtube",
-    "live"
+    "embed"
   ],
   "author": "AhopeZ Innovations",
   "license": "MIT",
