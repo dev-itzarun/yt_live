@@ -46,8 +46,8 @@ Add this script to your HTML to use the library directly in the browser:
 ```javascript
 const { generateIframe } = require('yt_live');
 
-// Replace 'UC_x5XG1OV2P6uZZ5FSM9Ttw' with your YouTube channel ID
-const iframeHTML = generateIframe('UC_x5XG1OV2P6uZZ5FSM9Ttw', 800, 450);
+// Replace 'UC8Z-VjXBtDJTvq6aqkIskPg' with your YouTube channel ID
+const iframeHTML = generateIframe('UC8Z-VjXBtDJTvq6aqkIskPg', 800, 450);
 console.log(iframeHTML);
 ```
 
@@ -55,8 +55,8 @@ console.log(iframeHTML);
 ```javascript
 import { generateIframe } from 'yt_live';
 
-// Replace 'UC_x5XG1OV2P6uZZ5FSM9Ttw' with your YouTube channel ID
-const iframeHTML = generateIframe('UC_x5XG1OV2P6uZZ5FSM9Ttw', 800, 450);
+// Replace 'UC8Z-VjXBtDJTvq6aqkIskPg' with your YouTube channel ID
+const iframeHTML = generateIframe('UC8Z-VjXBtDJTvq6aqkIskPg', 800, 450);
 console.log(iframeHTML);
 ```
 
@@ -64,8 +64,8 @@ console.log(iframeHTML);
 ```html
 <script src="https://cdn.jsdelivr.net/npm/yt_live/dist/yt_live.umd.js"></script>
 <script>
-    // Replace 'UC_x5XG1OV2P6uZZ5FSM9Ttw' with your YouTube channel ID
-    const iframeHTML = Ytlive.generateIframe('UC_x5XG1OV2P6uZZ5FSM9Ttw', 800, 450);
+    // Replace 'UC8Z-VjXBtDJTvq6aqkIskPg' with your YouTube channel ID
+    const iframeHTML = Ytlive.generateIframe('UC8Z-VjXBtDJTvq6aqkIskPg', 800, 450);
     console.log(iframeHTML);
 </script>
 ```
@@ -79,7 +79,7 @@ Follow these steps to locate your YouTube Channel ID:
 1. **Sign in** to your YouTube account.  
 2. Click on your **profile picture** in the top-right corner and select **Settings** from the dropdown menu.  
 3. In the left-hand menu, choose **Advanced Settings**.  
-4. Your **Channel ID** will be displayed under the "Channel settings" section.
+4. Your **Channel ID** will be displayed under the "Channel settings" section.  
 
 For more details, visit **[YouTube Advanced Settings](https://www.youtube.com/account_advanced)**.  
 
@@ -113,7 +113,7 @@ Generates the HTML string for an iframe to embed a YouTube Live stream.
 #### Example:
 
 ```javascript
-const iframeHTML = generateIframe('UC_x5XG1OV2P6uZZ5FSM9Ttw', 800, 450, {
+const iframeHTML = generateIframe('UC8Z-VjXBtDJTvq6aqkIskPg', 800, 450, {
     pictureInPicture: false,
     webShare: false,
     allowFullscreen: true,
@@ -124,7 +124,7 @@ console.log(iframeHTML);
 
 ---
 
-## Examples 🔥
+## Framework Examples 🔥
 
 ### React Example
 
@@ -133,7 +133,7 @@ import React from 'react';
 import { generateIframe } from 'yt_live';
 
 const App = () => {
-    const iframeHTML = generateIframe('UC_x5XG1OV2P6uZZ5FSM9Ttw', 800, 450);
+    const iframeHTML = generateIframe('UC8Z-VjXBtDJTvq6aqkIskPg', 800, 450);
     
     return (
         <div dangerouslySetInnerHTML={{ __html: iframeHTML }} />
@@ -142,6 +142,39 @@ const App = () => {
 
 export default App;
 ```
+
+---
+
+### Svelte Example
+
+```svelte
+<script>
+    import { generateIframe } from 'yt_live';
+
+    let iframeHTML = generateIframe('UC8Z-VjXBtDJTvq6aqkIskPg', 800, 450);
+</script>
+
+<div {@html iframeHTML}></div>
+```
+
+---
+
+### Angular Example
+
+```typescript
+import { Component } from '@angular/core';
+import { generateIframe } from 'yt_live';
+
+@Component({
+  selector: 'app-root',
+  template: `<div [innerHTML]="iframeHTML"></div>`,
+})
+export class AppComponent {
+  iframeHTML = generateIframe('UC8Z-VjXBtDJTvq6aqkIskPg', 800, 450);
+}
+```
+
+---
 
 ### Plain HTML Example
 
@@ -157,7 +190,7 @@ export default App;
     <div id="live-iframe"></div>
 
     <script>
-        const iframeHTML = Ytlive.generateIframe('UC_x5XG1OV2P6uZZ5FSM9Ttw', 800, 450);
+        const iframeHTML = Ytlive.generateIframe('UC8Z-VjXBtDJTvq6aqkIskPg', 800, 450);
         document.getElementById('live-iframe').innerHTML = iframeHTML;
     </script>
 </body>
@@ -168,13 +201,14 @@ export default App;
 
 ## License 📝
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).  
+Developed and published by **AhopeZ Innovations**.
 
 ---
 
 ## Support 💬
 
-If you encounter any issues or have questions, feel free to open an issue on [GitHub](https://github.com/your-username/yt_live/issues).
+If you encounter any issues or have questions, feel free to open an issue on [GitHub](https://github.com/your-username/yt_live/issues).  
 
 ---
 
