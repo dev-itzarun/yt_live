@@ -1,6 +1,6 @@
 {
   "name": "yt_live",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple Package that helps youtube channels to embed their live video automatically",
   "main": "dist/yt_live.cjs.js",
   "module": "dist/yt_live.esm.js",
