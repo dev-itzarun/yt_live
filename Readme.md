@@ -149,12 +149,12 @@ export default App;
 
 ```svelte
 <script>
-    import { generateIframe } from 'yt_live';
+import { generateIframe } from 'yt_live/dist/yt_live.esm.js';
 
     let iframeHTML = generateIframe('UC8Z-VjXBtDJTvq6aqkIskPg', 800, 450);
 </script>
 
-<div {@html iframeHTML}></div>
+{@html iframeHTML}
 ```
 
 ---
