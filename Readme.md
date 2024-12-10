@@ -209,7 +209,7 @@ Developed and published by **AhopeZ Innovations**.
 
 ## Support 💬
 
-If you encounter any issues or have questions, feel free to open an issue on [GitHub](https://github.com/your-username/yt_live/issues).  
+If you encounter any issues or have questions, feel free to open an issue on [GitHub](https://github.com/dev-itzarun/yt_live/issues).  
 
 ---
 
